@@ -1,0 +1,10 @@
+<h3><%= @task.name %></h3>
+<p><%= @task.description %></p>
+<% if @task.done == true %>
+  <p>[X]</p>
+<% else %>
+  <p>[ ]</p>
+<% end %>
+<p><%= @task.priority_level %></p>
+
+<%= link_to 'edit', edit_task_path(@task.id)%>
